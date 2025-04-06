@@ -115,8 +115,8 @@ export default function App() {
           <div className="flex items-center justify-center mt-10">
             <button
               type="submit"
-              className="px-4 py-2 text-white bg-[#00796B] rounded-md cursor-pointer outline-none"
-              disabled={isLoading}
+              className="px-4 py-2 text-white bg-[#00796B] rounded-md cursor-pointer outline-none disabled:bg-gray-400 disabled:cursor-not-allowed duration-300"
+              disabled={isLoading || trend === "" || industry === ""}
             >
               {isLoading ? "Loading..." : "Fetch Trends"}
             </button>
